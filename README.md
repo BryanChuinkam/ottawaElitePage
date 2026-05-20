@@ -15,7 +15,7 @@ Marketing and information website for Ottawa Elite Basketball, Ottawa's premier 
 
 | Route | Description |
 |---|---|
-| `/` | Home — hero, stats bar, programs preview, news strip, gallery teaser, sponsors |
+| `/` | Home — animated basketball hero, stats bar, programs preview, news strip, gallery teaser, sponsors |
 | `/teams` | All team programs (U13–U19 Prep, EVO Boys/Girls) |
 | `/news` | News articles index |
 | `/news/[slug]` | Individual article |
@@ -35,7 +35,7 @@ src/
   components/   # UI components grouped by page/feature
     home/       # Hero, StatsBar, ProgramsPreview, NewsStrip, etc.
     layout/     # Navbar, Footer
-    ui/         # Shared primitives (Button, Badge, SectionHeading, etc.)
+    ui/         # Shared primitives (Button, Badge, SectionHeading, AnimatedBasketballBg, etc.)
     about/      # CoachCard, AboutContent
     news/       # ArticleCard, NewsContent
     gallery/    # GalleryContent
@@ -76,6 +76,11 @@ All site content lives in `src/data/`:
 - `sponsors.ts` — sponsor logos and links
 
 Site-wide config (name, contact email, social links, nav) is in `src/lib/constants.ts`.
+
+## Notable Implementation Details
+
+- **Hero background** — `src/components/ui/AnimatedBasketballBg.tsx` renders two SVG basketballs (large upper-right, medium left-center) that float and rotate continuously via Framer Motion. Respects `prefers-reduced-motion`. The gradient overlays in `Hero.tsx` sit on top and ensure text stays readable.
+- **Sponsors marquee** — uses 4 copies of the sponsor list with a `translateX(-25%)` keyframe (one copy's worth of travel) so the strip always fills the full viewport width edge-to-edge.
 
 ## Deployment Notes
 
