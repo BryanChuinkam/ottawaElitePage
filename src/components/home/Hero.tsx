@@ -53,7 +53,7 @@ export default function Hero() {
             className="text-white/70 text-lg md:text-xl font-body max-w-2xl mb-10 leading-relaxed"
           >
             Identifying and developing the top basketball players in Eastern Ontario and the
-            Outaouais Region — training at Carleton University with Carleton Ravens mentorship.
+            Outaouais Region.
           </motion.p>
 
           <motion.div variants={heroChild} className="flex flex-wrap gap-4">

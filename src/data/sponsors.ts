@@ -7,5 +7,5 @@ export const SPONSORS: Sponsor[] = [
   { name: 'NPH', logo: '/images/sponsors/nph.png', tier: 'secondary' },
   { name: 'EOBA', logo: '/images/sponsors/eoba.png', url: 'https://eobahoops.com', tier: 'secondary' },
   { name: 'PromoWRX', logo: '/images/sponsors/promowrx.png', tier: 'secondary' },
-  { name: 'Carleton Ravens', logo: '/images/sponsors/carleton.png', url: 'https://carleton.ca', tier: 'secondary' },
+  // { name: 'Carleton Ravens', logo: '/images/sponsors/carleton.png', url: 'https://carleton.ca', tier: 'secondary' },
 ]
